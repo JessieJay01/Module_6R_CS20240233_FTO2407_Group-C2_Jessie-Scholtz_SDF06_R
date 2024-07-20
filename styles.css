@@ -16,8 +16,208 @@ body {
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
-}
+} 
 
 img {
     display: block;
 }
+
+/*My css styling-Profile section*/
+.container{
+    max-width: 935px;
+    margin: 0 auto;
+    padding:5px;
+}
+
+.btn{
+    display: inline-block;
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    padding:0;
+    cursor: pointer;
+
+}
+
+.btn:focus{
+    outline: 0.5em auto #4d90fe;
+}
+
+.visually-hidden{
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow:hidden;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.profile{
+    padding: 5rem 0;
+    
+}
+
+.profile::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+.profile-large{
+    float:left;
+    width:calc(33.33% - 1rem);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.profile-image img{
+    border-radius:50%;
+    border: 10px solid teal;
+    float:left;
+    flex:1;
+    margin-right:0px;
+}
+
+
+.profile-settings-btn {
+    border: 0px solid #dbdbdb;
+    font-size: 13px;
+}
+
+.profile-real-name {
+    font-weight: bold;
+}
+
+.profile-user-name{
+    font-size: 25px;
+    font-weight:200;
+    margin-right: 10px;
+}
+
+.profile-edit-btn{
+     font-size: 1.4rem;
+     line-height: 1.8;
+     border: 0.1rem solid #dbdbdb;
+     border-radius: 0.3rem;
+     padding: 0.4rem;
+     margin-left: 2rem;
+     
+}
+
+.profile-stats ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-stats li {
+    margin-right: 40px;
+}
+
+.profile-stat-count {
+    font-weight: bold;
+}
+
+.profile-bio {
+    flex-basis: 100%;
+    padding-top: 70px;
+    font-size: 12px;
+}
+
+.profile-stats {
+    flex-basis: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 13px;
+}
+
+.profile-setting-btn{
+    font-size:2rem;
+    margin-left:1rem;
+}
+
+.profile-user-settings {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.profile-user-name {
+    font-size: 25px;
+    margin-right: 10px;
+    font-weight:200;
+    
+}
+
+/*Profile sections ends here*/
+
+/*Gallery Section*/
+.container .gallery{
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 10px; 
+    padding: 20px 0;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 400px;
+}
+
+.gallery-item-info i {
+    margin-right: 5px;
+}
+
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.gallery-item-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item-info ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.gallery-item-info li {
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    display: flex;
+}
+/* end of gallery section*/
